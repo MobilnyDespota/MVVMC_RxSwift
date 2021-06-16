@@ -1,0 +1,84 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Differentiator (5.0.0)
+  - Mocker (2.5.2)
+  - ObjectMapper (4.2.0)
+  - PullToRefreshKit (0.8.8)
+  - PureLayout (3.1.8)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxBlocking (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxFlow (2.12.1):
+    - RxCocoa (>= 6.0.0)
+    - RxSwift (>= 6.0.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Mocker
+  - ObjectMapper
+  - PullToRefreshKit
+  - PureLayout
+  - RxAlamofire
+  - RxBlocking
+  - RxCocoa
+  - RxDataSources
+  - RxFlow
+  - RxOptional
+  - RxSwift
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Differentiator
+    - Mocker
+    - ObjectMapper
+    - PullToRefreshKit
+    - PureLayout
+    - RxAlamofire
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxFlow
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  Mocker: 304831b890144a47bd2858714041f7d4a304016d
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
+  PureLayout: a4afb3d79dd958564ce33d22c89f407280d8e6a8
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxFlow: 9999ef19546368f1bbc7bdb45ce187f508db16a1
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 66b04fe9354b5f807a623d842b3ae5f132ab5ed6
+
+COCOAPODS: 1.10.1
