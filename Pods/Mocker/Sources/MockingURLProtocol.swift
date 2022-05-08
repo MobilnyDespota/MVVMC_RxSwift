@@ -9,7 +9,7 @@
 import Foundation
 
 /// The protocol which can be used to send Mocked data back. Use the `Mocker` to register `Mock` data
-public final class MockingURLProtocol: URLProtocol {
+open class MockingURLProtocol: URLProtocol {
 
     enum Error: Swift.Error, LocalizedError, CustomDebugStringConvertible {
         case missingMockedData(url: String)
@@ -75,12 +75,12 @@ public final class MockingURLProtocol: URLProtocol {
         mock.completion?()
         mock.onCompletedExpectation?.fulfill()
     }
-    
+
     /// Implementation does nothing, but is needed for a valid inheritance of URLProtocol.
     override public func stopLoading() {
         responseWorkItem?.cancel()
     }
-    
+
     /// Simply sends back the passed request. Implementation is needed for a valid inheritance of URLProtocol.
     override public class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
@@ -98,7 +98,7 @@ private extension Data {
         let locationComponent = String(data: self, encoding: String.Encoding.utf8)?.components(separatedBy: "\n").first(where: { (value) -> Bool in
             return value.contains("Location:")
         })
-        
+
         guard let redirectLocationString = locationComponent?.components(separatedBy: "Location:").last, let redirectLocation = URL(string: redirectLocationString.trimmingCharacters(in: NSCharacterSet.whitespaces)) else {
             return nil
         }
@@ -108,7 +108,7 @@ private extension Data {
 
 private extension URLRequest {
     var postBodyArguments: [String: Any]? {
-        guard let httpBody = httpBodyStreamData() else { return nil }
+        guard let httpBody = httpBodyStreamData() ?? httpBody else { return nil }
         return try? JSONSerialization.jsonObject(with: httpBody, options: .fragmentsAllowed) as? [String: Any]
     }
 

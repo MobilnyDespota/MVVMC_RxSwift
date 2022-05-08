@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (5.4.3)
   - Differentiator (5.0.0)
-  - Mocker (2.5.2)
+  - Mocker (2.5.5)
   - ObjectMapper (4.2.0)
   - PullToRefreshKit (0.8.8)
   - PureLayout (3.1.8)
@@ -65,7 +65,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
-  Mocker: 304831b890144a47bd2858714041f7d4a304016d
+  Mocker: 8c731a8104962f246cadf2b02556218e9edc1390
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
   PureLayout: a4afb3d79dd958564ce33d22c89f407280d8e6a8
@@ -81,4 +81,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 66b04fe9354b5f807a623d842b3ae5f132ab5ed6
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
