@@ -39,33 +39,23 @@ class MoviesViewModelTests: XCTestCase {
     }
 
     func testLoadingNowPlayingOnCreate() {
-        let waitForIt = expectation(description: "now playing loaded on create")
-        
-        sut.dataSource
-            .subscribe(onNext: { dataSource in
-                guard dataSource.isNotEmpty else { return }
-                if dataSource[0].header == "Playing now" && dataSource[0].items.isNotEmpty {
-                    waitForIt.fulfill()
-                }
-            })
-            .disposed(by: disposeBag)
-        
-        wait(for: [waitForIt], timeout: 0.2)
+        do {
+            let result = try sut.dataSource.toBlocking().first()
+            XCTAssertEqual(result?[0].header, "Playing now")
+            XCTAssertNotEqual(result?[0].items.count, 0)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
     }
     
     func testLoadingPopularOnCreate() {
-        let waitForIt = expectation(description: "popular loaded on create")
-        
-        sut.dataSource
-            .subscribe(onNext: { dataSource in
-                guard dataSource.isNotEmpty else { return }
-                if dataSource[1].header == "Most popular" && dataSource[1].items.count == MoviesViewModelTests.pageSize {
-                    waitForIt.fulfill()
-                }
-            })
-            .disposed(by: disposeBag)
-        
-        wait(for: [waitForIt], timeout: 0.2)
+        do {
+            let result = try sut.dataSource.toBlocking().first()
+            XCTAssertEqual(result?[1].header, "Most popular")
+            XCTAssertEqual(result?[1].items.count, MoviesViewModelTests.pageSize)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
     }
     
     func testLoadMore() {
