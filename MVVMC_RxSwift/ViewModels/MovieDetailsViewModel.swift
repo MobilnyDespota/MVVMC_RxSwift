@@ -11,8 +11,9 @@ class MovieDetailsViewModel {
         movie.asObservable()
             .flatMap { [weak self] movie -> Observable<Movie> in
                 guard let self = self, let id = movie.id else { return .empty() }
-                return self.movieService.getMovieDetails(id: id).share()
+                return self.movieService.getMovieDetails(id: id)
             }
+            .share(replay: 1)
     }()
     
     lazy var image: Observable<UIImage> = {

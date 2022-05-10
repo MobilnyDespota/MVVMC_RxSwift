@@ -140,7 +140,7 @@ class MovieCellViewModel {
             .filterNil()
             .flatMap { [weak self] movie -> Observable<Movie> in
                 guard let self = self, let id = movie.id else { return .empty() }
-                return self.movieService.getMovieDetails(id: id).share()
+                return self.movieService.getMovieDetails(id: id)
             }
             .map { movie in
                 guard let duration = movie.duration else { return "" }
