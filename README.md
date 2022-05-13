@@ -1,5 +1,9 @@
 # MVVM-C & RxSwift by Bartosz Żarczyński
 
+| | |
+| --- | --- |
+| ![](./MVVMC_RxSwift_movies.png) | ![](./MVVMC_RxSwift_details.png) |
+
 ## Architecture
 
 Solution implemented using MVVM-C, which is my preferred pattern. 
