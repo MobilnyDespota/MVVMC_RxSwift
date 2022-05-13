@@ -4,6 +4,7 @@ import RxSwift
 import RxBlocking
 import Swinject
 import Mocker
+import TMDB
 
 class MoviesViewModelTests: XCTestCase {
     var sut: MoviesViewModel!
@@ -12,9 +13,9 @@ class MoviesViewModelTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        loadJSON(from: "nowplaying", for: "https://api.themoviedb.org/3/movie/now_playing?api_key=***REMOVED***")
-        loadJSON(from: "popular1", for: "https://api.themoviedb.org/3/movie/popular?api_key=***REMOVED***&page=1")
-        loadJSON(from: "popular2", for: "https://api.themoviedb.org/3/movie/popular?api_key=***REMOVED***&page=2")
+        loadJSON(from: "nowplaying", for: "https://api.themoviedb.org/3/movie/now_playing?api_key=" + Api.Key)
+        loadJSON(from: "popular1", for: "https://api.themoviedb.org/3/movie/popular?api_key=" + Api.Key + "&page=1")
+        loadJSON(from: "popular2", for: "https://api.themoviedb.org/3/movie/popular?api_key=" + Api.Key + "&page=2")
         sut = MoviesViewModel(movieService: Container.sharedContainer.resolve(MovieService.self, name: "mock")!)
         disposeBag = DisposeBag()
     }

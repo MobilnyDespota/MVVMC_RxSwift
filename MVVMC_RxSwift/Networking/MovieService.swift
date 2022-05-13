@@ -2,6 +2,7 @@ import Foundation
 import RxSwift
 import Alamofire
 import RxAlamofire
+import TMDB
 
 protocol MovieService {
     func getNowPlaying() -> Observable<PageResponse<Movie>>
@@ -11,7 +12,7 @@ protocol MovieService {
 }
 
 class MovieServiceManager: MovieService {
-    let apiKey = "***REMOVED***"
+    let apiKey = Api.Key
     let baseUrl = "https://api.themoviedb.org/3"
     let imageBaseUrl = "https://image.tmdb.org/t/p/w154"
     

@@ -4,6 +4,7 @@ import RxSwift
 import RxBlocking
 import Swinject
 import Mocker
+import TMDB
 
 class MovieDetailsViewModelTests: XCTestCase {
     var sut: MovieDetailsViewModel!
@@ -16,7 +17,7 @@ class MovieDetailsViewModelTests: XCTestCase {
             do {
                 let jsonString = try String(contentsOfFile: path)
                 let jsonData = jsonString.data(using: .utf8)!
-                let url = URL(string: "https://api.themoviedb.org/3/movie/632357?api_key=***REMOVED***")!
+                let url = URL(string: "https://api.themoviedb.org/3/movie/632357?api_key=" + Api.Key)!
                 let mock = Mock(url: url, dataType: .json, statusCode: 200, data: [.get: jsonData])
                 mock.register()
                 mockMovie = Movie(JSONString: jsonString)

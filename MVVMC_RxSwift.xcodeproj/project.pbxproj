@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		92AAC02D23B126AB0069BD33 /* MoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAC02C23B126AB0069BD33 /* MoviesViewModelTests.swift */; };
 		92AAC03823B126AB0069BD33 /* MVVMC_RxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAC03723B126AB0069BD33 /* MVVMC_RxSwiftUITests.swift */; };
 		92AAC04D23B12F280069BD33 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAC04C23B12F280069BD33 /* MovieService.swift */; };
+		9377D268282E4813001F03A3 /* TMDB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9377D266282E4813001F03A3 /* TMDB.xcframework */; };
+		9377D269282E4828001F03A3 /* TMDB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9377D266282E4813001F03A3 /* TMDB.xcframework */; };
 		A5E96B0C266AD08E003B7C32 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E96B0B266AD08E003B7C32 /* AppFlow.swift */; };
 		A5E96BFD266BD046003B7C32 /* SwinjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E96BFC266BD046003B7C32 /* SwinjectExtension.swift */; };
 		A5E96C05266BD4A2003B7C32 /* RxAlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E96C04266BD4A2003B7C32 /* RxAlamofireExtension.swift */; };
@@ -88,6 +90,7 @@
 		92AAC03723B126AB0069BD33 /* MVVMC_RxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMC_RxSwiftUITests.swift; sourceTree = "<group>"; };
 		92AAC03923B126AB0069BD33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92AAC04C23B12F280069BD33 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		9377D266282E4813001F03A3 /* TMDB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TMDB.xcframework; sourceTree = "<group>"; };
 		A4549C16C9E7556773527BFF /* Pods-MVVMC_RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMC_RxSwift.release.xcconfig"; path = "Target Support Files/Pods-MVVMC_RxSwift/Pods-MVVMC_RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		A5E96B0B266AD08E003B7C32 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A5E96BFC266BD046003B7C32 /* SwinjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectExtension.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9377D269282E4828001F03A3 /* TMDB.xcframework in Frameworks */,
 				F0C2F79A90B502D318EFE816 /* Pods_MVVMC_RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9377D268282E4813001F03A3 /* TMDB.xcframework in Frameworks */,
 				0433F3467FF8079820D30816 /* Pods_MVVMC_RxSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +302,7 @@
 		E8C2D3FFDAD36B688542CB0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9377D266282E4813001F03A3 /* TMDB.xcframework */,
 				683534DB49CF1B9749053589 /* Pods_MVVMC_RxSwift.framework */,
 				B64579C42B0D5D4E299EFB84 /* Pods_MVVMC_RxSwiftTests.framework */,
 				2E8931886206E248BD27D5FB /* Pods_MVVMC_RxSwiftUITests.framework */,
