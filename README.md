@@ -8,7 +8,7 @@
 
 Solution implemented using MVVM-C, which is my preferred pattern. 
 
-* Model - dummy models reflecting json content donwloaded from API
+* Model - dummy models reflecting json content downloaded from API
 * View - pure views without any logic
 * ViewModel - responsible for getting data via service, contains presentation logic and exposes ready data to views
 * Coordinator - extra layer for managing navigation
